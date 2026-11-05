@@ -63,8 +63,8 @@ Build a serious, mobile-first, landscape 3D battle-royale shooter inspired by th
 
 - [x] Step 1 — Establish architecture and product specification. Define runtime, boundaries, screens, systems, and acceptance checklist. (This file.)
 - [x] Step 2 — Build the launch experience and responsive design system: fullscreen, settings, offline/online entry points, landscape handling, HUD editor shell.
-- [ ] Step 3 — Build offline lobby: two teams, independent bot counters defaulting to zero, start match.
-- [ ] Step 4 — Build 3D world foundation: camera, lighting, terrain, environment composition, buildings and collision.
+- [x] Step 3 — Build offline lobby: two teams, independent bot counters defaulting to zero, start match.
+- [x] Step 4 — Build 3D world foundation: camera, lighting, terrain, environment composition, buildings and collision (first-pass procedural world; detailed interior navigation remains a later polish item).
 - [ ] Step 5 — Build player controller: fixed joystick, fast sprint, camera look, jump, crouch, desktop controls, multi-touch.
 - [ ] Step 6 — Build combat and weapon systems: two weapon slots, swap, firing, scope, reload, health/damage.
 - [ ] Step 7 — Build loot, unlimited backpack, pickups and healing.
@@ -75,7 +75,7 @@ Build a serious, mobile-first, landscape 3D battle-royale shooter inspired by th
 - [ ] Step 12 — Run functional/static checks, fix defects, update documentation and verify deployed service.
 
 ## Current implementation notes
-Step 1 completed. The next implementation step is Step 2. Keep this checklist honest: only mark a step complete after its code exists and its acceptance checks have been performed. If a feature is partial, describe it as partial rather than claiming completion.
+Steps 1–4 completed as an initial playable foundation: specification, launch shell, offline lobby, and procedural 3D battlefield are committed. Step 4 is a first-pass environment foundation, not a finished AAA-scale world. Next implementation step is Step 5. Keep this checklist honest: only mark a step complete after its code exists and its acceptance checks have been performed. If a feature is partial, describe it as partial rather than claiming completion.
 
 ## Deployment
 Host as a static site on Render from the GitHub repository. No server/database is required for the offline milestone. A later online multiplayer milestone can add an authoritative game server separately.
