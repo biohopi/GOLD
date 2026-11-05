@@ -73,9 +73,13 @@ Build a serious, mobile-first, landscape 3D battle-royale shooter inspired by th
 - [ ] Step 10 — Complete pause flow and draggable/persistent HUD layout customization.
 - [ ] Step 11 — Add audio hooks, effects, polish, graphics settings, responsive performance tuning and resilience.
 - [ ] Step 12 — Run functional/static checks, fix defects, update documentation and verify deployed service.
+- [ ] Step 13 — Design and implement online architecture: authoritative match server, room lifecycle, player identity/session, reconnect handling, server tick and state replication.
+- [ ] Step 14 — Build online room lobby: create/join room, host controls, two-team player slots, independent bot counts per team, ready state and launch flow.
+- [ ] Step 15 — Integrate real-time multiplayer gameplay: movement replication, server-authoritative combat/damage, bot simulation, loot state, match end and disconnect recovery.
+- [ ] Step 16 — Deploy and load-test online services, configure production environment/secrets, validate latency and reconnect behavior.
 
 ## Current implementation notes
-Steps 1–4 completed as an initial playable foundation: specification, launch shell, offline lobby, and procedural 3D battlefield are committed. Step 4 is a first-pass environment foundation, not a finished AAA-scale world. Next implementation step is Step 5. Keep this checklist honest: only mark a step complete after its code exists and its acceptance checks have been performed. If a feature is partial, describe it as partial rather than claiming completion.
+Steps 1–4 completed as an initial playable foundation: specification, launch shell, offline lobby, and procedural 3D battlefield are committed. Step 4 is a first-pass environment foundation, not a finished AAA-scale world. The online button is an integration placeholder until Steps 13–16 are implemented. Next implementation step is Step 5. Keep this checklist honest: only mark a step complete after its code exists and its acceptance checks have been performed. If a feature is partial, describe it as partial rather than claiming completion.
 
 ## Deployment
 Host as a static site on Render from the GitHub repository. No server/database is required for the offline milestone. A later online multiplayer milestone can add an authoritative game server separately.
