@@ -8,7 +8,7 @@ Build a serious, mobile-first, landscape 3D battle-royale shooter inspired by th
 - Orientation: landscape-first, with an orientation prompt on narrow portrait screens.
 - Rendering: WebGL through Three.js; adaptive pixel ratio, capped shadow quality, instancing/merged geometry where useful.
 - Assets: prefer permissively licensed, ready-to-use GLB/GLTF assets when verified; procedural fallback geometry ensures the game never depends on a third-party model host.
-- Multiplayer: prepare clean seams for a future online transport, but this milestone is offline-first. No fake online mode.
+- Multiplayer: online play is a required product goal. Keep the offline mode usable while implementing a real authoritative online server; never present a placeholder as playable multiplayer.
 - Original identity: FRONTLINE: ERANGEL, with original UI, map layout, names, and generated/procedural assets.
 
 ## Requested experience and acceptance criteria
@@ -65,11 +65,11 @@ Build a serious, mobile-first, landscape 3D battle-royale shooter inspired by th
 - [x] Step 2 — Build the launch experience and responsive design system: fullscreen, settings, offline/online entry points, landscape handling, HUD editor shell.
 - [x] Step 3 — Build offline lobby: two teams, independent bot counters defaulting to zero, start match.
 - [x] Step 4 — Build 3D world foundation: camera, lighting, terrain, environment composition, buildings and collision (first-pass procedural world; detailed interior navigation remains a later polish item).
-- [ ] Step 5 — Build player controller: fixed joystick, fast sprint, camera look, jump, crouch, desktop controls, multi-touch.
-- [ ] Step 6 — Build combat and weapon systems: two weapon slots, swap, firing, scope, reload, health/damage.
+- [ ] Step 5 — Build player controller: fixed joystick, correctly mapped directional controls, fast sprint, stable full-area camera drag, jump, crouch, collision, desktop controls and multi-touch. (In progress: joystick horizontal mapping and document-level drag tracking improved; needs device verification.)
+- [ ] Step 6 — Build combat and weapon systems: two weapon slots, swap, firing, selectable 1x/2x/4x/8x optics, scoped view, reload, hit feedback and health/damage. (In progress: optic selection, scoped overlay and reload control added.)
 - [ ] Step 7 — Build loot, unlimited backpack, pickups and healing.
 - [ ] Step 8 — Build bot AI and team combat: navigation, line of sight, wall occlusion, team awareness, spawn counts.
-- [ ] Step 9 — Build minimap and tactical HUD: FOV wedge, player/bot markers, ammo/health/team status.
+- [ ] Step 9 — Build minimap and tactical HUD: correctly oriented FOV wedge, player/bot markers, ammo/health/team status. (In progress: corrected wedge heading; verify on device.)
 - [ ] Step 10 — Complete pause flow and draggable/persistent HUD layout customization.
 - [ ] Step 11 — Add audio hooks, effects, polish, graphics settings, responsive performance tuning and resilience.
 - [ ] Step 12 — Run functional/static checks, fix defects, update documentation and verify deployed service.
@@ -79,7 +79,7 @@ Build a serious, mobile-first, landscape 3D battle-royale shooter inspired by th
 - [ ] Step 16 — Deploy and load-test online services, configure production environment/secrets, validate latency and reconnect behavior.
 
 ## Current implementation notes
-Steps 1–4 completed as an initial playable foundation: specification, launch shell, offline lobby, and procedural 3D battlefield are committed. Step 4 is a first-pass environment foundation, not a finished AAA-scale world. The online button is an integration placeholder until Steps 13–16 are implemented. Next implementation step is Step 5. Keep this checklist honest: only mark a step complete after its code exists and its acceptance checks have been performed. If a feature is partial, describe it as partial rather than claiming completion.
+The first control-and-world refinement pass has been committed: square-bodied block soldiers replace capsule characters; the blocked doorway filler was removed; joystick horizontal mapping was reversed to match expected left/right input; camera drag tracking now continues at document level after pointer capture; the old AIM label was replaced by a hold-to-scope control with selectable 1x/2x/4x/8x optics and a scope overlay; reload was added; the minimap view wedge now follows camera heading. These are code changes, not yet verified on a physical phone. Building interiors, stairs, collision, weapon feel, AI and online multiplayer remain incomplete. The online button is still only a placeholder; real online server work remains required in Steps 13–16. Keep this checklist honest: only mark a step complete after its code exists and its acceptance checks have been performed.
 
 ## Deployment
 Host as a static site on Render from the GitHub repository. No server/database is required for the offline milestone. A later online multiplayer milestone can add an authoritative game server separately.
