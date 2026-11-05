@@ -62,7 +62,7 @@ Build a serious, mobile-first, landscape 3D battle-royale shooter inspired by th
 ## Implementation sequence (follow in order; update this file after each step)
 
 - [x] Step 1 — Establish architecture and product specification. Define runtime, boundaries, screens, systems, and acceptance checklist. (This file.)
-- [ ] Step 2 — Build the launch experience and responsive design system: fullscreen, settings, offline/online entry points, landscape handling, HUD editor shell.
+- [x] Step 2 — Build the launch experience and responsive design system: fullscreen, settings, offline/online entry points, landscape handling, HUD editor shell.
 - [ ] Step 3 — Build offline lobby: two teams, independent bot counters defaulting to zero, start match.
 - [ ] Step 4 — Build 3D world foundation: camera, lighting, terrain, environment composition, buildings and collision.
 - [ ] Step 5 — Build player controller: fixed joystick, fast sprint, camera look, jump, crouch, desktop controls, multi-touch.
